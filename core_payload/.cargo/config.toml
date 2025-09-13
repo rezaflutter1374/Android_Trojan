@@ -1,0 +1,16 @@
+[target.aarch64-linux-android]
+linker = "aarch64-linux-android26-clang"
+ar = "llvm-ar"
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+[target.armv7-linux-androideabi]
+linker = "armv7a-linux-androideabi26-clang"
+ar = "llvm-ar"
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+
+# Note:
+# - The above assumes your Android NDK toolchain binaries are in your PATH.
+# - If not, replace the linker/ar values with absolute paths, for example on macOS:
+#   linker = "/path/to/android-ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android26-clang"
+#   ar     = "/path/to/android-ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar"

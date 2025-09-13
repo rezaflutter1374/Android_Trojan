@@ -1,0 +1,53 @@
+# Go
+/c2_server/bin/
+/c2_server/vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Rust
+/core_payload/target/
+/core_payload/Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Android/Java/Kotlin
+/dropper_app/.gradle/
+/dropper_app/build/
+/dropper_app/app/build/
+/dropper_app/local.properties
+/dropper_app/.idea/
+/dropper_app/*.iml
+/dropper_app/.DS_Store
+/dropper_app/captures/
+/dropper_app/.externalNativeBuild/
+/dropper_app/.cxx/
+
+# C++
+/plugins/build/
+/plugins/CMakeFiles/
+/plugins/CMakeCache.txt
+/plugins/cmake_install.cmake
+/plugins/Makefile
+*.o
+*.a
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

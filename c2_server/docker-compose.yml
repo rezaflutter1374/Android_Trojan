@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  c2server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/root/logs
+    restart: unless-stopped
+    environment:
+      - GIN_MODE=release
