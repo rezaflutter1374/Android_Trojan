@@ -1,0 +1,142 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 26 min SDK version: x86_64",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1771240373
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON /Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64/android_gradle_build.json due to:",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -477762556
+  },
+  {
+    "level_": 0,
+    "message_": "- expected json /Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64/android_gradle_build.json file is not present, will remove stale json folder",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1101108058
+  },
+  {
+    "level_": 0,
+    "message_": "- missing previous command file /Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64/metadata_generation_command.txt, will remove stale json folder",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1770061508
+  },
+  {
+    "level_": 0,
+    "message_": "- command changed from previous, will remove stale json folder",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 561059725
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64\u0027",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1464416321
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64\u0027",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1093155787
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake /Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  \"-H/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp\" \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d26 \\\n  -DANDROID_PLATFORM\u003dandroid-26 \\\n  -DANDROID_ABI\u003dx86_64 \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003dx86_64 \\\n  -DANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  \"-B/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64\" \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 810170508
+  },
+  {
+    "level_": 0,
+    "message_": "/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  \"-H/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp\" \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d26 \\\n  -DANDROID_PLATFORM\u003dandroid-26 \\\n  -DANDROID_ABI\u003dx86_64 \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003dx86_64 \\\n  -DANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  \"-B/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64\" \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1241021267
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: -- The C compiler identification is Clang 21.0.0\n-- The CXX compiler identification is Clang 21.0.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring incomplete, errors occurred!\nSee also \"/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64/CMakeFiles/CMakeOutput.log\".\n\nC++ build system [configure] failed while executing:\n    /Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n      \"-H/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp\" \\\n      -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n      -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n      -DCMAKE_SYSTEM_VERSION\u003d26 \\\n      -DANDROID_PLATFORM\u003dandroid-26 \\\n      -DANDROID_ABI\u003dx86_64 \\\n      -DCMAKE_ANDROID_ARCH_ABI\u003dx86_64 \\\n      -DANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n      -DCMAKE_ANDROID_NDK\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066 \\\n      -DCMAKE_TOOLCHAIN_FILE\u003d/Users/rezaflutt/Library/Android/sdk/ndk/29.0.13846066/build/cmake/android.toolchain.cmake \\\n      -DCMAKE_MAKE_PROGRAM\u003d/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n      \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n      \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/x86_64\" \\\n      -DCMAKE_BUILD_TYPE\u003dDebug \\\n      \"-B/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/x86_64\" \\\n      -GNinja \\\n      -DANDROID_STL\u003dc++_shared\n  from /Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app\nCMake Error at CMakeLists.txt:23 (find_library):\n  Could not find RUST_LIB using the following names: core_payload",
+    "file_": "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|x86_64",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1998863407
+  }
+]

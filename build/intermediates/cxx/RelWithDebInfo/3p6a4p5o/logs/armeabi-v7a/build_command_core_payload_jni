@@ -1,0 +1,4 @@
+/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/RelWithDebInfo/3p6a4p5o/armeabi-v7a" \
+  core_payload_jni

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.3.1" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.color.purple_200"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="29"
+            endOffset="79"/>
+        <entry
+            name="model"
+            string="attr[colorPrimaryVariant(R)],color[purple_200(D),black(U),teal_200(U),white(U),teal_700(U),ic_launcher_background(U),purple_700(U),purple_500(U)],drawable[ic_launcher_foreground(U)],id[status_text_view(U),enable_service_button(U)],layout[activity_main(U)],mipmap[ic_launcher(U)],string[service_status_disabled(U),accessibility_service_label(U),app_name(U),service_status_enabled(U),accessibility_service_description(U),enable_service_button(U)],style[Theme_HermesDropper(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)],xml[data_extraction_rules(U),accessibility_service_config(U),backup_rules(U)];c^e^13,d^6^9,14^15^8^7^4^3^5^2^0;;;"/>
+    </map>
+
+</incidents>

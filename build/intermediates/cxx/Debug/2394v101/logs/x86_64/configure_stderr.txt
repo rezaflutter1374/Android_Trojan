@@ -1,0 +1,4 @@
+CMake Error at CMakeLists.txt:23 (find_library):
+  Could not find RUST_LIB using the following names: core_payload
+
+

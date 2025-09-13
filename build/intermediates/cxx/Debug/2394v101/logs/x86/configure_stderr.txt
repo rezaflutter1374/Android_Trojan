@@ -1,0 +1,4 @@
+CMake Error at CMakeLists.txt:14 (message):
+  Unsupported ANDROID_ABI: x86
+
+

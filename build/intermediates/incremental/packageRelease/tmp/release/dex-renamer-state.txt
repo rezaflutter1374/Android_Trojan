@@ -1,0 +1,7 @@
+#Sat Sep 13 19:25:44 IRST 2025
+base.1=/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+path.1=classes2.dex
+base.0=/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

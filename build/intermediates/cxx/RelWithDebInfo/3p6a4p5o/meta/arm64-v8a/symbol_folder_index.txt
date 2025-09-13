@@ -1,0 +1,1 @@
+/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/RelWithDebInfo/3p6a4p5o/obj/arm64-v8a

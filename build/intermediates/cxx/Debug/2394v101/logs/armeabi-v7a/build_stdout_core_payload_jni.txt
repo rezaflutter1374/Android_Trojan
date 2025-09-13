@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/armeabi-v7a'
+ninja: no work to do.

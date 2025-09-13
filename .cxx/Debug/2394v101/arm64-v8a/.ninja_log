@@ -1,0 +1,4 @@
+# ninja log v5
+1	392	1757773856360387599	/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/arm64-v8a/libcore_payload_jni.so	6f1537462e9b1464
+0	442	1757773691183879814	CMakeFiles/core_payload_jni.dir/core_payload_jni.cpp.o	b875e625c80c7e44
+21	736	1757780068110808684	/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/build/intermediates/cxx/Debug/2394v101/obj/arm64-v8a/libcore_payload_jni.so	6f1537462e9b1464

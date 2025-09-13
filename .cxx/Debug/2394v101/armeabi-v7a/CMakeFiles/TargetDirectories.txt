@@ -1,0 +1,3 @@
+/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/armeabi-v7a/CMakeFiles/core_payload_jni.dir
+/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/armeabi-v7a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+/Users/rezaflutt/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  "/Users/rezaflutt/Android Trojan/Hermes_Spectre_Edition/dropper_app/app/.cxx/Debug/2394v101/arm64-v8a" \
+  core_payload_jni

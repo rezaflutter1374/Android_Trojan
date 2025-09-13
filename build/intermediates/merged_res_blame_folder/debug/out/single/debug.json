@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.dropper.app-merged_res-39:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.dropper.app-main-41:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.dropper.app-merged_res-39:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.dropper.app-main-41:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.dropper.app-merged_res-39:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.dropper.app-main-41:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.dropper.app-merged_res-39:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.dropper.app-main-41:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.dropper.app-merged_res-39:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.dropper.app-main-41:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/layout_activity_main.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/xml_backup_rules.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/xml_accessibility_service_config.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/xml/accessibility_service_config.xml"
+    },
+    {
+        "merged": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-merged_res-39:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/rezaflutt/.gradle/daemon/7.4/com.example.dropper.app-main-41:/drawable/ic_launcher_foreground.xml"
+    }
+]

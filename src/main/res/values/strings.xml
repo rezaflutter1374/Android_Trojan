@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Game Optimizer</string>
+    <string name="accessibility_service_label">Game Optimizer Boost</string>
+    <string name="accessibility_service_description">Enable this service to automatically boost your game performance by optimizing background processes. This requires permissions to view and control the screen.</string>
+    <string name="enable_service_button">Enable Performance Boost</string>
+    <string name="service_status_disabled">Status: Disabled. Enable the service for full functionality.</string>
+    <string name="service_status_enabled">Status: Enabled. Performance boost is active!</string>
+</resources>

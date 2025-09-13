@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.3.1" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="20"
+            column="23"
+            startOffset="1157"
+            endLine="20"
+            endColumn="64"
+            endOffset="1198"/>
+        <map>
+            <entry
+                name="maxSdk"
+                int="28"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 31">
+        <fix-replace
+            description="Delete tools:targetApi"
+            replacement="">
+            <range
+                file="${:app*debug*sourceProvider*0*manifest*0}"
+                startOffset="2550"
+                endOffset="2570"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="50"
+            column="9"
+            startOffset="2550"
+            endLine="50"
+            endColumn="29"
+            endOffset="2570"/>
+        <map>
+            <condition minGE="31"/>
+        </map>
+    </incident>
+
+</incidents>
